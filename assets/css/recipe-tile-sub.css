@@ -1,0 +1,27 @@
+.recipe-tile-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.recipe-tile-sub-heart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12%;
+}
+.recipe-tile-sub i {
+    font-size: 0.99vw;
+    color: #31525B;
+}
+.recipe-tile-sub i:hover {
+    color: #FFA101;
+}
+.recipe-tile-sub-heart p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.99vw;
+    font-weight: 300;
+}

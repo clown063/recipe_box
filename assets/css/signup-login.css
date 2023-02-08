@@ -1,0 +1,274 @@
+/* signup.php and login.php (Used https://github.com/sefyudem/Responsive-Login-Form as reference) */
+.signup, .login {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Left side */
+.profile-pic {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+.login-profile-pic {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    overflow: hidden;
+}
+.login-profile-pic img {
+    position: relative;
+    top: 0;
+    right: -5%;
+    width: 60%;
+}
+.profile-pic .profile-pic-div {
+    position: relative;
+    top: 0;
+    width: 17.1875vw;
+    border: 0.1375vw solid black;
+    height: 17.1875vw;
+    border-radius:50%;
+    overflow: hidden;
+    z-index: 1;
+}
+.img-upload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.34375vw;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+.img-upload input {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+input[type='file'] {
+    opacity: 0;   
+}
+.img-upload-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.img-upload-div i {
+    font-size: 7.7vw;
+    opacity: 0.3;
+    z-index: -10;
+}
+.img-upload-div p {
+    font-size: 0.88vw;
+    z-index: -10;
+}
+#preview-selected-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+/* Right Side */
+.profile-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+.input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93% 7%;
+    margin: 0.6875vw 0;
+    padding: 0.34374vw 0;
+    border-bottom: 0.1375vw solid #d9d9d9;
+}
+.login .input-div {
+    margin: 1.03125vw 0;
+}
+.input-div:after, .input-div:before{
+    content: '';
+    position: absolute;
+    bottom: -0.1375vw;
+    width: 0;
+    height: 0.1375vw;
+    background-color: #31525B;
+    transition: .3s;
+}
+.input-div:after {
+    left:50%;
+}
+.input-div:before {
+    right:50%;
+}
+.input-div.focus .i i{
+    color:#31525B;
+}
+
+.input-div.focus div h5 {
+    top: -0.34375vw;
+    font-size: 1.03125vw;
+}
+.input-div.focus:after, .input-div.focus:before {
+    width: 50%;
+}
+/* Left */
+.i {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.i i {
+    color: #d9d9d9;
+    transition: .3s;
+}
+/* Middle */
+.input-div > div {
+    position: relative;
+    width: 100%;
+    height: 3.09375vw;
+}
+.input-div div h5 {
+    position: absolute;
+    left: 0.6875vw;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.43vw;
+    transition: .3s;
+}
+.input-div div input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.55vw 0.77vw;
+    font-size: 1.43vw;
+    color: #555;
+}
+.password_open,  .password_closed {
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    transform: translateY(-50%);
+    color: #555;
+    z-index: -10;
+    visibility: hidden;
+}
+.password_open.focus,  .password_closed.focus {
+    visibility: visible;
+    z-index: 10;
+}
+.username-success, .email-success, .password-success, .password2-success {
+    position: absolute;
+    top: 1.16875vw;
+    left: 0.1375vw;
+    visibility: hidden;
+}
+.username-success i, .email-success i , .password-success i, .password2-success i{
+    color: #31525B;
+    transition: .3s;
+}
+/* Down */
+.user-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-btn {
+    display: block;
+    width: 80%;
+    height: 50px;
+    border-radius: 1.71875vw;
+    margin: 1.1vw 0;
+    font-size: 1.43vw;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #31525B, #B3DEE5, #31525B);
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    background-size: 200%;
+    transition: .5s;
+}
+.user-btn.contact {
+    width: 44%;
+}
+.user-btn:hover {
+    background-position:right;
+}
+/* ERROR HANDLING */
+.signup-error, .login-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+/*notifi */
+.notifi {
+    visibility: hidden;
+    position: absolute;
+    top: 11%;
+    right: 3%;
+    background-color: #FAE6B1;
+    width: 17.1875vw;
+    height: 18.5625vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.20625vw;
+}
+.notifi.on {
+    visibility: visible;
+}
+.notifi p {
+    font-size: 2.2vw;
+    color: #31525B;
+}
+.need-to-login {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.need-to-login p {
+    font-size: 3.3vw;
+    color: #31525B;
+}
+.need-to-login.an {
+    height: 100%;
+}
+.need-to-login.an p {
+    font-size: 5.5vw;
+}

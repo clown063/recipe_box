@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* This allows you to include the padding and border in an element's total width and height */
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    top: 0;
+    font-family: 'League Spartan', sans-serif;
+    width: 100vw;
+    height: 100%;
+}
+input, button, textarea {
+    font-family: 'League Spartan', sans-serif;
+}
+.contents {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1.3fr 8.7fr;
+}
+header {
+    display: grid;
+    grid-template-columns: 4.3fr 3.5fr 1.6fr 0.6fr;
+    background-color: #31525B;
+    min-height: 6.8vw;
+}
+.logos {
+    display: grid;
+    grid-template-columns: 3.5fr 6.5fr;
+}
+.logos a {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.logo {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    position: absolute;
+    bottom: 3%;
+    width: 90%;
+}
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-title h1 {
+    margin-top: 5%;
+    font-weight: bold;
+    color: #ffff;
+    font-size: 4.2vw;
+}
+.header-title img {
+    width: 2.75vw;
+}
+.searchbox {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox  i {
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    margin-top: 0.5%;
+    transform: translateY(-50%);
+    font-size: 1.43vw;
+    opacity: 0.7;
+}
+.searchbox  input {
+    margin-top: 1%;
+    width: 100%;
+    height: 3.3vw;
+    outline: none;
+    border: none;
+    border-radius: 2.0625vw;
+    padding: 0.6875vw;
+    padding-left: 2.75vw;
+    font-size: 1.43vw;
+}
+::placeholder {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    font-size: 1.43vw;
+}
+/* Header buttons */
+.header-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header-buttons i {
+    font-size: 3.3vw;
+    color: #ffff;
+    cursor: pointer;
+}
+.header-buttons i:hover {
+    color: #FFA101;
+    transition: 0.4s;
+}
+
+
+/* Profile Logo */
+.profile-logo {
+    position: relative;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.2vw;
+    height: 5.2vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-logo img{
+    padding-top: 15%;
+    width: 125%;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* container */
+.container {
+    display: grid;
+    grid-template-columns: 1.505fr 8.495fr;
+    min-height: 45.50769vw;
+}
+nav {
+    background-color: #FAE6B1;
+}
+nav > a {
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.down-logo img {
+    position: absolute;
+    width: 13.5%;
+    margin-left: 0.75%;
+}
+.navigations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+.navigations a {
+    width: 100%;
+    padding: 0.9625vw 0;
+    padding-left: 2.5%;
+    cursor: pointer;
+    color: #31525B;
+    text-decoration: none;
+}
+.navigations a:hover {
+    background-color: #31525B;
+    color: #FAE6B1;
+    transition: 0.2s;
+}
+.navigations a.focus {
+    background-color: #31525B;
+    color: #FAE6B1;
+    transition: 0.2s;
+}
+.navigations i {
+    font-size: 1.43vw;
+}
+.navigations P {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.65vw;
+    padding-left: 0.20625vw;
+}
+
+/* Profile */
+.profile {
+    visibility: hidden;
+    position: absolute;
+    top: 11%;
+    right: 3%;
+    background-color: #FAE6B1;
+    width: 16.5vw;
+    height: 18.5625vw;
+    display: grid;
+    grid-template-rows: 3fr 6fr;
+    border-radius: 0.20625vw;
+}
+.profile.on {
+    visibility: visible;
+}
+.name-pic {
+    display: grid;
+    grid-template-columns: 3.8fr 6.2fr;
+}
+.pro-pic {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.3vw;
+    height: 5.3vw;
+    margin-left: 0.5vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pro-pic img {
+    padding-top: 15%;
+    width: 125%;
+    height: auto;
+}
+.name-pic div {
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5.3vw;
+}
+.name-pic p {
+    color: #31525B;
+    font-size: 1.65vw;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+/* Profile nav */
+.profile-nav {
+    margin-top: 5%;
+}
+.signup-btn, .login-btn, .edit-btn, .logout-btn {
+    display: grid;
+    grid-template-columns: 3.8fr 6.2fr;
+    height: 50%;
+    color: #31525B;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.signup-btn:hover, .login-btn:hover, .edit-btn:hover, .logout-btn:hover {
+    background-color: #31525B;
+    color: #FAE6B1;
+}
+.proNav.focus {
+    background-color: #31525B;
+    color: #FAE6B1;
+}
+.profile-nav a div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.3vw;
+    height: 100%;
+    margin-left: 1vw;
+}
+.profile-nav a div i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.63vw;
+    width: 100%;
+    height: 100%;
+}
+.profile-nav .signup-btn div i {
+    margin-left: 0.33vw;
+    font-size: 3.3vw;
+}
+.signup-btn p, .login-btn p, .edit-btn p, .logout-btn p{
+    width: 100%;
+    font-size: 1.65vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}

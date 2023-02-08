@@ -1,0 +1,26 @@
+.recipe-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+    height: 100%;
+}
+.go-to-next, .go-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 2.619vw;
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #31525B, #B3DEE5, #31525B);
+    background-size: 200%;
+    transition: .5s;
+    border-radius: 1.71875vw;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.go-to-next:hover, .go-back:hover {
+    background-position:right;
+}
