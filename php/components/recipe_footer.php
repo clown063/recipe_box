@@ -2,12 +2,13 @@
     $current_page = $_SESSION['current_page'];
 ?>    
 <div class="recipe-footer">
-    <?php if (isset($_SESSION['food_data']) || $current_page == "others-recipe" || $current_page == "search-result") {
-        if ($pageNum > 0) { ?>
-            <a class="go-back" href="php/data/next-page.php?message=back&page=<?php echo $current_page?>">Go back</a>
-        <?php };
-        if ($data_count - ($pageNum * 12) > 12) { ?>
-            <a class="go-to-next" href="php/data/next-page.php?message=go&page=<?php echo $current_page?>">Next Page</a>
-        <?php }; 
-    }; ?>
+    <?php 
+        for ($i = 1; $i < $page_count+2; $i ++):?>
+            <a href="php/data/next-page.php?message=<?php echo $i?>&page=<?php echo $current_page?>"
+                <?php if ($pageNum+1 == $i):?>
+                    class="focus"
+                <?php endif;?>
+            ><?php echo $i?></a>
+        <?php endfor;
+    ?>
 </div>

@@ -24,7 +24,7 @@
                         $data_count = COUNT ($data);
                         // Get the data_max
                         include 'php/components/data-max.php';
-                        for ($i = $pageNum * 12; $i < $data_count; $i ++): ?>
+                        for ($i = $pageNum * 40; $i < $data_max; $i ++): ?>
                             <div class="othersRecipe-tile">
                                 <div class="othersRecipe-tile-title">
                                     <div class="others-pro-img">
@@ -40,6 +40,7 @@
                             </div>
                         <?php endfor;?>
                     </div>
+                    <?php include 'php/components/recipe_footer.php'; ?>
                 </div>
             <?php else:?>
                 <div class="need-to-login an">

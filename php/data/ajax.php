@@ -25,7 +25,7 @@
     endwhile;
     $_SESSION['numberOfLikes'] = $numberOfLikes_array;
     $numberOfLikes_data = $_SESSION['numberOfLikes'];
-    $top_recipes = $sql->query("SELECT COUNT(user_id), food_id FROM likes GROUP BY food_id ORDER BY COUNT(user_id) DESC LIMIT 12");
+    $top_recipes = $sql->query("SELECT COUNT(user_id), food_id FROM likes GROUP BY food_id ORDER BY COUNT(user_id) DESC LIMIT 40");
     $top_recipes_array = array();
     while ($top = $top_recipes->fetch_assoc()):
         $top_recipes_array[] = $top;

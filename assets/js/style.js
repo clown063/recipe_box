@@ -1,3 +1,15 @@
+var screenW = window.screen.availWidth;
+var screenH = window.screen.availHeight;
+var container = document.querySelectorAll(".container");
+var header_H = screenW/100*6.8;
+if (window.screen.availHeight*0.13 <= header_H){
+   container.forEach(conta => {
+      conta.style.top= "6.8vw";
+      conta.style.height = (screenH-header_H)+"px";
+      console.log (screenH);
+   });
+};
+
 const inputs = document.querySelectorAll('.input');
 var img_upload = document.getElementById("img-upload");
 var image_uploaded = false;

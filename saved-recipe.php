@@ -29,7 +29,7 @@
                         // Exchange data
                         $data = $everyone_data;
                         $saved_data = $_SESSION['savedRecipe_data'];
-                        for ($j = $pageNum * 12; $j < $data_max; $j ++):
+                        for ($j = $pageNum * 40; $j < $data_max; $j ++):
                             for ($i = 0; $i < count($data); $i ++):
                                 if ($saved_data[$j]['food_id'] == $data[$i]['id']):?>
                                     <div class="othersRecipe-tile">

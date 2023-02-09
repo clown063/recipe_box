@@ -4,23 +4,22 @@
     left: 15.05%;
     width: 84.95vw;
     height: 100%;
-    overflow: scroll;
-    min-height: 45.5077vw;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .recipe-container {
-    display: grid;
-    grid-template-rows: 1fr 9fr;
+    position: relative;
+    top: 0;
     width: 100%;
     height: 100%;
 }
 .recipe-tile-titles {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute;
+    top: 0;
     display: grid;
     grid-template-columns: 2fr 8fr;
     width: 100%;
-    height: 100%;
+    height: 10%;
 }
 .recipe-tile-titles h2 {
     position: absolute;
@@ -45,9 +44,8 @@
     width: 80%;
 }
 .recipe-main {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
-    height: 41.01354vw;
+    position: absolute;
+    top: 10%;
     width: 100%;
 }
 .recipe-contents {
