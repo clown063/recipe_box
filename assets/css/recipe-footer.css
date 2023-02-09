@@ -6,6 +6,11 @@
     width: 100%;
     height: 10vh;
 }
+.recipe-footer.focus {
+    position: absolute;
+    bottom: 0;
+}
+
 .recipe-footer a {
     font-size: 1.43vw;
     text-decoration: none;

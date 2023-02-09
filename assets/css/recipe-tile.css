@@ -48,6 +48,9 @@
     top: 10%;
     width: 100%;
 }
+.recipe-main.focus {
+    height: 90%;
+}
 .recipe-contents {
     display: flex;
     align-items: center;

@@ -35,7 +35,7 @@
                 );
                 if ($result):
                     /* File path to upload */
-                    $file_path = "../upload-img/";
+                    $file_path = "../../assets/upload-img/";
                     // Upload file
                     move_uploaded_file($_FILES['file']['tmp_name'], $file_path .$fileName);
                     // Assign Session

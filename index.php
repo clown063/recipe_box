@@ -45,9 +45,6 @@
                             </div>
                         <?php endif; ?>           
                     </div>
-                    <div class="uploading-category-footer">
-                        <a class="go-to-cateogry" href="my-recipe.php">Check More</a>
-                    </div>
                 </div>
             <?php else: ?>
                 <div class="need-to-login">
@@ -86,9 +83,6 @@
                             <?php endfor;
                         ?>   
                     </div>         
-                    <div class="uploading-category-footer">
-                        <a class="go-to-cateogry" href="others-recipe.php">Check More</a>
-                    </div>
                 </div>
             <?php else:?>
                 <div class="need-to-login">

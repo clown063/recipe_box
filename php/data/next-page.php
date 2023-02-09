@@ -12,9 +12,6 @@
         elseif ($page == "my-recipe"):
             $_SESSION['my-recipe'] = $page_num;
             header("Location: ../../my-recipe.php");
-        elseif ($page == "category"):
-            $_SESSION['categoryRecipe'] = $page_num;
-            header("Location: ../../category.php");
         elseif ($page == "category-page"):
             $_SESSION['categoryPage'] = $page_num;
             header("Location: ../../category-page.php");

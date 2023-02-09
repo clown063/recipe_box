@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <h5>User Name</h5>
-                    <input class="input one" type="text" name="username" required 
+                    <input class="input one" type="text" name="username" required maxlength = "8"
                         <?php if (isset($_SESSION['input-username'])) { 
                             $input_username = $_SESSION['input-username']; ?>
                             value=<?php echo $input_username ?>

@@ -50,7 +50,7 @@
                                         <option value="JAPANESE"></option>
                                         <option value="WESTERN"></option>
                                         <option value="ITALIAN"></option>
-                                        <option value="CHINEASE"></option>
+                                        <option value="CHINESE"></option>
                                         <option value="FRENCH"></option>
                                         <option value="KOREAN"></option>
                                     <?php endif; ?>    
@@ -81,12 +81,7 @@
                 <div class="uploading-category-main">
                     <div class="uploading-category-contents">
                         <?php $food_data = $_SESSION['food_data'];
-                        if (count ($data) > 4):
-                            $data_max = 4;
-                        else:
-                            $data_max = count($data);
-                        endif;
-                        for ($i = 0; $i < $data_max; $i ++):?>
+                        for ($i = 0; $i < COUNT($data); $i ++):?>
                             <div class="category-tile">
                                 <div class="category-tile-title">
                                     <h4><?php echo $data[$i]['category'] ?></h4>
@@ -108,9 +103,6 @@
                                 </div>
                             </div>
                         <?php endfor;?>
-                    </div>
-                    <div class="uploading-category-footer">
-                        <a class="go-to-cateogry" href="category.php">Check More Categories</a>
                     </div>
                 </div>
             <?php else:?>

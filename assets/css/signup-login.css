@@ -236,7 +236,7 @@ input[type='file'] {
 /*notifi */
 .notifi {
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 11%;
     right: 3%;
     background-color: #FAE6B1;
@@ -246,6 +246,7 @@ input[type='file'] {
     justify-content: center;
     align-items: center;
     border-radius: 0.20625vw;
+    z-index: 12;
 }
 .notifi.on {
     visibility: visible;

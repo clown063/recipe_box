@@ -12,12 +12,6 @@
     } else if (!isset($_SESSION['othersRecipe'])){
         $_SESSION['othersRecipe'] = 0;
     }
-    // category.php
-    if ($current_page != "category") {
-        unset($_SESSION['categoryRecipe']);
-    } else if (!isset($_SESSION['categoryRecipe'])){
-        $_SESSION['categoryRecipe'] = 0;
-    }
     // category-page.php
     if ($current_page != "category-page") {
         unset($_SESSION['categoryPage']);

@@ -39,7 +39,7 @@
                             $data_count = COUNT($data);
                             // Get the data_max
                             include 'php/components/data-max.php';
-                            for ($i = $pageNum * 12; $i < $data_max; $i ++): ?>
+                            for ($i = $pageNum * 40; $i < $data_max; $i ++): ?>
                                 <div class="myrecipe-tile">
                                     <div class="myrecipe-tile-title">
                                         <h4><?php echo $data[$i]['food_name'] ?></h4>

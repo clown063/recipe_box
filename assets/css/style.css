@@ -199,7 +199,7 @@ nav > a {
 /* Profile */
 .profile {
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 11%;
     right: 3%;
     background-color: #FAE6B1;
@@ -208,6 +208,8 @@ nav > a {
     display: grid;
     grid-template-rows: 3fr 6fr;
     border-radius: 0.20625vw;
+    z-index: 12;
+    overflow: hidden;
 }
 .profile.on {
     visibility: visible;
@@ -234,7 +236,7 @@ nav > a {
     width: 125%;
     height: auto;
 }
-.name-pic div {
+.name-pic > div {
     position: relative;
     top: 55%;
     left: 50%;
