@@ -24,10 +24,10 @@
                     <div>
                         <div class="pic-link">
                             <div class="upload-pic" id="upload-pic"> 
-                                <input type="file" title="" required accept="image/png, image/jpeg, image/jpg" name="food-file" onchange="foodPreviewImage(event)">
+                                <input type="file" title="" required accept="image/png, image/jpeg, image/jpg, image/webp" name="food-file" onchange="foodPreviewImage(event)">
                                 <div class="upload-pic-div" id="upload-pic-div">
                                     <i class="fa fa-camera" aria-hidden="true"></i>
-                                    <p id="upload-pic-div-p">ADD IMAGE(JPG or PNG)</p>
+                                    <p id="upload-pic-div-p">ADD IMAGE(JPG, PNG or WebP)</p>
                                 </div>    
                                 <img id="food-preview-selected-image"> 
                             </div>

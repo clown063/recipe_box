@@ -9,10 +9,10 @@
         <div class="profile-pic">
             <div class="profile-pic-div" id="profile-pic-div"> 
                 <div class="img-upload" id="img-upload">
-                    <input type="file" title="" required accept="image/png, image/jpeg, image/jpg" name="file" onchange="previewImage(event)">
+                    <input type="file" title="" required accept="image/png, image/jpeg, image/jpg, image/webp" name="file" onchange="previewImage(event)">
                     <div class="img-upload-div" id="img-upload-div">
                         <i class="fa fa-camera" aria-hidden="true"></i>
-                        <p id="img-upload-div-p">ADD IMAGE(JPG or PNG)</p>
+                        <p id="img-upload-div-p">ADD IMAGE(JPG, PNG or WebP)</p>
                     </div>    
                 </div>
                 <img id="preview-selected-image"> 
