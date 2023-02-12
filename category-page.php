@@ -57,6 +57,7 @@
             </div>
         </div> 
     <?php endif; ?>   
+    <?php include 'php/components/menu-container.php';?>
 </main>
 <?php 
     include 'php/components/bottom.php';

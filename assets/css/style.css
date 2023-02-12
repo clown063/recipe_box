@@ -18,7 +18,7 @@ input, button, textarea {
     width: 100vw;
     height: 100vh;
 }
-header {
+header, .header {
     display: grid;
     grid-template-columns: 4.3fr 3.5fr 1.6fr 0.6fr;
     background-color: #31525B;
@@ -29,14 +29,34 @@ header {
     min-height: 6.8vw;
     z-index: 10;
 }
+.header {
+    display: grid;
+    height: 10%;
+    visibility: hidden;
+    z-index: -10;
+}
 .logos {
     display: grid;
-    grid-template-columns: 3.5fr 6.5fr;
+    grid-template-columns: 0px 0px 3.5fr 6.5fr;
 }
 .logos a {
     outline: none;
     border: none;
     text-decoration: none;
+}
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    visibility: hidden;
+    z-index: -3;
+}
+.menu-icon i {
+    margin-top: 5%;
+    font-size: 3vw;
 }
 .logo {
     position: relative;
@@ -80,7 +100,7 @@ header {
     font-size: 1.43vw;
     opacity: 0.7;
 }
-.searchbox  input {
+.searchbox input {
     margin-top: 1%;
     width: 100%;
     height: 3.3vw;
@@ -116,10 +136,6 @@ header {
 
 /* Profile Logo */
 .profile-logo {
-    position: relative;
-    top: 50%;
-    left: 46%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,6 +143,12 @@ header {
     height: 5.2vw;
     border-radius: 50%;
     overflow: hidden;
+}
+header .profile-logo {
+    position: relative;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
 }
 .profile-logo img{
     padding-top: 15%;
@@ -146,21 +168,25 @@ header {
     height: 87%;
     width: 100%;
 }
+
+/* Navigation */
 nav {
     background-color: #FAE6B1;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* 15.05vw */
+    height: 100%;/* 87vh */
 }
 nav > a {
     outline: none;
     border: none;
     text-decoration: none;
 }
+/* Logo */
 .down-logo img {
     position: absolute;
     width: 13.5%;
     margin-left: 0.75%;
 }
+/* Navigations */
 .navigations {
     display: flex;
     flex-direction: column;
@@ -170,7 +196,7 @@ nav > a {
 }
 .navigations a {
     width: 100%;
-    padding: 0.9625vw 0;
+    padding: 6.4% 0;
     padding-left: 2.5%;
     cursor: pointer;
     color: #31525B;
@@ -187,13 +213,13 @@ nav > a {
     transition: 0.2s;
 }
 .navigations i {
-    font-size: 1.43vw;
+    font-size: 130%;
 }
 .navigations P {
     display: inline-block;
     font-weight: 600;
-    font-size: 1.65vw;
-    padding-left: 0.20625vw;
+    font-size: 150%;
+    padding-left: 1.37%;
 }
 
 /* Profile */
@@ -301,4 +327,17 @@ nav > a {
     align-items: center;
     justify-content: center;
     margin-bottom: 5%;
+}
+/* Menu Container */
+.menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    visibility: hidden;
+    background-color: #FAE6B1;
+    z-index: -10;
 }

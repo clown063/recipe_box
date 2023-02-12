@@ -41,6 +41,8 @@
                             endfor;
                         endfor;?>
                     </div>
+                    <div style="height: 10vh;">
+                    </div>
                 </div>
             <?php else:?>
                 <div class="need-to-login an">
@@ -49,6 +51,7 @@
             <?php endif;?>
         </div>      
     </div>
+    <?php include 'php/components/menu-container.php';?>
 </main>
 <?php 
     include 'php/components/bottom.php';

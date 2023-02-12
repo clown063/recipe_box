@@ -2,7 +2,7 @@ var screenW = window.screen.availWidth;
 var screenH = window.screen.availHeight;
 var container = document.querySelectorAll(".container");
 var header_H = screenW/100*6.8;
-if (window.screen.availHeight*0.13 <= header_H){
+if (screenH*0.13 <= header_H){
    container.forEach(conta => {
       conta.style.top= "6.8vw";
       conta.style.height = (screenH-header_H)+"px";
@@ -133,4 +133,53 @@ password_closed.forEach(password => password.addEventListener("click", ()=> {
 // Interval Reloading
 function reloading() {
     location.reload();
+}
+
+var recipe_tiles =  document.querySelectorAll(".recipe-tile");
+var menu_containers = document.querySelectorAll(".menu-container");
+var menu_shows = document.querySelectorAll(".menu-show");
+var menu_closeds = document.querySelectorAll(".menu-closed");
+var logos = document.querySelectorAll(".logos");
+
+function menu_show(){
+    recipe_tiles.forEach(recipe_tile=> {
+        recipe_tile.classList.add('hide');
+    });
+    menu_containers.forEach(menu_container=> {
+        menu_container.classList.add('open');
+    });
+    menu_shows.forEach(menu_show=> {
+        menu_show.style.visibility = "hidden";
+        menu_show.style.zIndex = "-3";
+        menu_show.style.position = "absolute";
+    });
+    menu_closeds.forEach(menu_closed=> {
+        menu_closed.style.position = "static";
+        menu_closed.style.visibility = "visible";
+        menu_closed.style.zIndex = "3";
+    });
+    logos.forEach(logo=> {
+        logo.classList.add("open");
+    });
+}
+function menu_closed() {
+    recipe_tiles.forEach(recipe_tile=> {
+        recipe_tile.classList.remove('hide');
+    });
+    menu_containers.forEach(menu_container=> {
+        menu_container.classList.remove('open');
+    });
+    menu_shows.forEach(menu_show=> {
+        menu_show.style.visibility = "visible";
+        menu_show.style.zIndex = "3";
+        menu_show.style.position = "static";
+    });
+    menu_closeds.forEach(menu_show=> {
+        menu_show.style.position = "absolute";
+        menu_show.style.visibility = "hidden";
+        menu_show.style.zIndex = "-3";
+    });
+    logos.forEach(logo=> {
+        logo.classList.remove("open");
+    });
 }

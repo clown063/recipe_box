@@ -1,0 +1,263 @@
+@media screen and (max-width: 1167px) {
+    /* Header */
+    header {
+        height: 10%;
+        grid-template-columns: 3.4fr 3.8fr 1.6fr 0.6fr;
+    }
+    .logos {
+        grid-template-columns: 2fr 0px 8fr;
+    }
+    .menu-icon {
+        background: none;
+        outline: none;
+        border: none;
+        visibility: visible;
+        z-index: 3;
+    }
+    .menu-icon.menu-closed {
+        position: absolute;
+        visibility: hidden;
+        z-index: -3;
+    }
+    .menu-icon.menu-closed i {
+        font-size: 4vw;
+    }
+    .logo {
+        visibility: hidden;
+        z-index: -3;
+    }
+    .header-title h1 {
+        width: 90%;
+    }
+    /* Container */
+    .container {
+        display: block;
+        grid-template-columns: none;
+        top: 10%;
+        height: 90%;
+    }
+    nav {
+        visibility: hidden;
+        z-index: -10;
+    }
+    .down-logo {
+        visibility: hidden;
+    }
+    /* Recipe Tile */
+    .recipe-tile {
+        width: 100vw;
+        left: 0;
+    }
+    .recipe-tile.hide {
+        visibility: hidden;
+        z-index: -10;
+    }
+    .recipe-tile-titles h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 170%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    .recipe-tile-titles:before {
+        visibility: hidden;
+    }
+    /* Others Recipe-tile */
+    .othersRecipe-tile {
+        width: 200px;
+        height: 150px;
+    }
+    /* Menu Container */
+    .menu-container.open {
+        visibility: visible;
+        z-index: 10;
+    }
+    .navigations {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .menu-container.open .navigations.iphone {
+        visibility: hidden;
+        display: none;
+    }
+    .menu-container.open .navigations.tablet {
+        margin-top: 30px;
+        visibility: visible;
+    }
+    .navigations a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        padding: 4% 0;
+    }
+    .navigations a:hover, .navigations a.focus {
+        transition: 0s;
+    }
+}
+@media screen and (max-width: 642px) {
+    /* Header */
+    header {
+        visibility: hidden;
+        z-index: -10;
+    }
+    .header {
+        visibility: visible;
+        z-index: 10;
+    }
+    .header-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-left .menu-icon {
+        background: none;
+        outline: none;
+        border: none;
+        width: 10%;
+    }
+    .header-left .menu-icon i {
+        margin-top: 0;
+    }
+    .header-left .header-icon {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #notifi-logo-btn {
+        font-size: 3.3vw;
+        color: #ffff;
+        cursor: pointer;
+    }
+    .header .header-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+        outline: none;
+        border: none;
+        text-decoration: none;
+    }
+    .header .header-title h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        width: 100%;
+        margin-top: 0;
+    }
+    .header .header-title img {
+        margin-bottom: 0.8vw;
+    }
+    /* Menu Container */
+    .logos.open {
+        grid-template-columns: 2fr 0px 8fr;
+    }
+    .searchbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3% 0;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+    }
+    .searchbox div {
+        position: relative;
+        top: 0;
+        height: 30px;
+        width: 350px;
+        max-width: 95vw;
+    }
+    .searchbox  i {
+        position: absolute;
+        font-size: 15px;
+        left: 2%;
+    }
+    .searchbox  input {
+        height: 100%;
+        width: 350px;
+        padding-left: 8%;
+        font-size: 15px;
+        max-width: 95vw;
+    }
+    .searchbox  input::placeholder {
+        position: absolute;
+        top: 52%;
+        transform: translateY(-50%);
+        font-size: 15px;
+    }
+    .menu-container.open .navigations.iphone {
+        visibility: visible;
+        display: block;
+    }
+    .menu-container.open .navigations.tablet {
+        display: none;
+        visibility: hidden;
+    }
+    .navigations a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+}
+@media screen and (min-height: 1000px) {
+    header {
+        height: 10%;
+    }
+    .container {
+        top: 10%;
+        height: 90%;
+    }
+}
+@media screen and (min-height: 1200px) and (max-width: 1500px) {
+    header {
+        height: 10%;
+    }
+    .container {
+        top: 10%;
+        height: 90%;
+    }
+}
+@media screen and (min-height: 1500px) and (max-width: 1400px) {
+    header {
+        height: 8%;
+    }
+    .container {
+        top: 8%;
+        height: 92%;
+    }
+}
+@media screen and (min-height: 900px) and (max-width: 1200px) {
+    header {
+        height: 9%;
+    }
+    .container {
+        top: 9%;
+        height: 91%;
+    }
+}
+@media screen and (min-height: 900px) and (max-width: 1167px) {
+    header {
+        height: 9%;
+    }
+    .container {
+        top: 9%;
+        height: 91%;
+    }
+}

@@ -26,6 +26,7 @@
                         include 'php/components/data-max.php';
                         for ($i = $pageNum * 40; $i < $data_max; $i ++): ?>
                             <div class="othersRecipe-tile">
+                                <!-- Top Part -->
                                 <div class="othersRecipe-tile-title">
                                     <div class="others-pro-img">
                                         <img src="assets/upload-img/<?php echo $data[$i]['pro_img'] ?>">
@@ -33,9 +34,11 @@
                                     <p><?php echo $data[$i]['user_name'] ?></p>
                                     <h4><?php echo $data[$i]['food_name'] ?></h4>
                                 </div>
+                                <!-- Middle Part -->
                                 <a href="<?php echo $data[$i]['link'] ?>" class="othersRecipe-tile-pic" rel="noopener" target="_blank">
                                     <img src="assets/upload-img/<?php echo $data[$i]['uploaded_food_img'] ?>">
                                 </a>
+                                <!-- Bottom Part -->
                                 <?php include 'php/components/recipe-tile-sub.php'; ?>
                             </div>
                         <?php endfor;?>
@@ -49,6 +52,7 @@
             <?php endif;?>
         </div>      
     </div>
+    <?php include 'php/components/menu-container.php';?>
 </main>     
 <?php   
     include 'php/components/bottom.php';

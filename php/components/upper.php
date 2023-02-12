@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="assets/css/othersRecipe-tile.css">
         <link rel="stylesheet" href="assets/css/uploading-recipe.css">
         <link rel="stylesheet" href="assets/css/contact-us.css">
+        <link rel="stylesheet" href="assets/css/res.css">
         <!-- font awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +37,13 @@
         <div class="contents">
             <header>
                 <div class="logos">
-                   <a href="index.php" class="logo">
+                   <button class="menu-icon menu-show" onclick="menu_show()"> 
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="menu-icon menu-closed" onclick="menu_closed()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <a href="index.php" class="logo">
                         <img src="assets/img/profile-upper.png">
                     </a>
                     <a href="index.php" class="header-title">
@@ -48,7 +55,7 @@
                     <input type="text" placeholder="Search... (Food Name)" onKeyPress="return checkSubmit(event)" name = "search_key_words">
                 </form>
                 <div class="header-buttons">
-                    <a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="index.php" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
                     <a href="calendar.php"><i class="fa fa-calendar-o" aria-hidden="true"></i></a>
                     <a id="notifi-logo-btn"><i class="fa fa-bell" aria-hidden="true"></i></a>
                 </div>
@@ -63,6 +70,32 @@
                     >
                 </div>
             </header>
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-icon menu-show" onclick="menu_show()">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    <button class="menu-icon menu-closed" onclick="menu_closed()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <div class="header-icon">
+                        <a id="notifi-logo-btn"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                        <div class="profile-logo">
+                            <img id="profile-logo-btn"
+                                <?php if (isset($_SESSION['profile-img'])):
+                                    $profile_img = $_SESSION['profile-img']?>
+                                    src = "assets/upload-img/<?php echo $profile_img?>" 
+                                <?php else: ?>
+                                    src="assets/img/user-avatar.png" style="width: 180%; padding-bottom: 28%;"
+                                <?php endif; ?>
+                            >
+                        </div>
+                    </div>
+                </div>
+                <a href="index.php" class="header-title">
+                    <h1>RECIPE B<img src="assets/img/egg.png">X</h1>
+                </a>
+            </div>
             <div class="container">
                 <!-- Navigations -->
                 <?php include 'nav.php';?>
