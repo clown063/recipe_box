@@ -148,7 +148,10 @@
     border: none;
     outline: none;
 }
-.food-input input::placeholder {
+.food-input input ::placeholder{
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
     font-size: 1.43vw;
     color: #FFA101;
 }

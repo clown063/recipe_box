@@ -195,10 +195,7 @@
         font-size: 15px;
         max-width: 95vw;
     }
-    .searchbox  input::placeholder {
-        position: absolute;
-        top: 52%;
-        transform: translateY(-50%);
+    .searchbox input ::placeholder {
         font-size: 15px;
     }
     .menu-container.open .navigations.iphone {
