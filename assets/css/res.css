@@ -44,15 +44,15 @@
         visibility: hidden;
     }
     /* Recipe Tile */
-    .recipe-tile {
+    .recipe-tile, .upload-recipe-tile {
         width: 100vw;
         left: 0;
     }
-    .recipe-tile.hide {
+    .recipe-tile.hide, .upload-recipe-tile.hide {
         visibility: hidden;
         z-index: -10;
     }
-    .recipe-tile-titles h2 {
+    .recipe-tile-titles h2, .upload-recipe-tile-titles h2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,7 +61,7 @@
         transform: translate(-50%, -50%);
         width: 100%;
     }
-    .recipe-tile-titles:before {
+    .recipe-tile-titles:before, .upload-recipe-tile-titles:before {
         visibility: hidden;
     }
     /* Others Recipe-tile */

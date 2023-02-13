@@ -1,19 +1,26 @@
 .myrecipe-tile {
     display: grid;
     grid-template-rows: 1.3fr 7.4fr 1.3fr;
-    width: 20%;
+    width: 16.99vw;
     height: 12.304vw;
 }
 .myrecipe-tile-title {
+    position: relative;
+    top: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 2%;
+    overflow: hidden;
 }
 .myrecipe-tile-title h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.88vw;
+    font-size: 80%;
     color: #31525B;
 }
 .myrecipe-tile-pic {

@@ -7,14 +7,14 @@
             </div>
         </form>
         <a class="home
-            <?php if ($current_page == "my-recipe"): ?>
+            <?php if ($current_page == "index"): ?>
                 focus
             <?php endif; ?>" href="index.php">
             <i class="fa fa-home" aria-hidden="true"></i>
             <p>Home</p>
         </a>
         <a class="calender 
-            <?php if ($current_page == "my-recipe"): ?>
+            <?php if ($current_page == "calendar"): ?>
                 focus
             <?php endif; ?>" href="calendar.php">
             <i class="fa fa-calendar-o" aria-hidden="true"></i>

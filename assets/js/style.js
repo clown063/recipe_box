@@ -136,6 +136,7 @@ function reloading() {
 }
 
 var recipe_tiles =  document.querySelectorAll(".recipe-tile");
+var upload_recipe_tiles = document.querySelectorAll(".upload-recipe-tile");
 var menu_containers = document.querySelectorAll(".menu-container");
 var menu_shows = document.querySelectorAll(".menu-show");
 var menu_closeds = document.querySelectorAll(".menu-closed");
@@ -144,6 +145,9 @@ var logos = document.querySelectorAll(".logos");
 function menu_show(){
     recipe_tiles.forEach(recipe_tile=> {
         recipe_tile.classList.add('hide');
+    });
+    upload_recipe_tiles.forEach(upload_recipe_tile=> {
+        upload_recipe_tile.classList.add('hide');
     });
     menu_containers.forEach(menu_container=> {
         menu_container.classList.add('open');
@@ -165,6 +169,9 @@ function menu_show(){
 function menu_closed() {
     recipe_tiles.forEach(recipe_tile=> {
         recipe_tile.classList.remove('hide');
+    });
+    upload_recipe_tiles.forEach(upload_recipe_tile=> {
+        upload_recipe_tile.classList.remove('hide');
     });
     menu_containers.forEach(menu_container=> {
         menu_container.classList.remove('open');
