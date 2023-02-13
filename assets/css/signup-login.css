@@ -1,9 +1,14 @@
 /* signup.php and login.php (Used https://github.com/sefyudem/Responsive-Login-Form as reference) */
 .signup, .login {
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 84.95vw;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /* Left side */
 .profile-pic {

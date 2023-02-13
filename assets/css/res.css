@@ -96,6 +96,67 @@
     .navigations a:hover, .navigations a.focus {
         transition: 0s;
     }
+    /* Signup, Login */
+    .signup, .login {
+        width: 100vw;
+        left: 0;
+    }
+    .profile-pic .profile-pic-div {
+        width: 230px;
+        border: 1px solid black;
+        height: 230px;
+    }
+    .img-upload {
+        border-radius: 4.5087px;
+    }
+    .img-upload-div i {
+        font-size: 101.1px;
+    }
+    .img-upload-div p {
+        font-size: 11.55px;
+        z-index: -10;
+    }
+    .profile-reg {
+        width: 280px;
+    }
+    .input-div {
+        margin: 9.0234px 0;
+        padding: 4.511px 0;
+        border-bottom: 1.8px solid #d9d9d9;
+    }
+    .login .input-div {
+        margin: 13.535px 0;
+    }
+    .input-div:after, .input-div:before{
+        bottom: -1.8px;
+        height: 1.4px;
+    }
+    .input-div.focus div h5 {
+        top: -4.5px;
+        font-size: 13.5px;
+    }
+    .input-div > div {
+        height: 40.6px;
+    }
+    .input-div div h5 {
+        font-size: 18.77px;
+    }
+    .input-div div input {
+        padding: 8px 10px;
+        font-size: 18.77px;
+        height: 40px;
+        width: 270px;
+    }
+    .username-success, .email-success, .password-success, .password2-success {
+        top: 15.2px;
+        left: 1.7875px;
+    }
+    .user-btn {
+        border-radius: 22.34px;
+        margin: 14.3px 0;
+        font-size: 18.77px;
+    }
+
 }
 @media screen and (max-width: 642px) {
     /* Header */
@@ -212,7 +273,38 @@
         align-items: center;
         height: 60px;
     }
+    /* SIGNUP */
+    .signup, .login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-pic {
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        min-height: 260px;
+        max-height: 280px;
+        margin: 0;
+    }
+    .login-profile-pic {
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .profile-reg {
+        height: 100%;
+        width: 350px;
+        min-height: 350px;
+        max-height: 400px;
+    }
+    .input-div div input {
+        width: 330px;
+    }
 }
+
+
 @media screen and (min-height: 1000px) {
     header {
         height: 10%;
