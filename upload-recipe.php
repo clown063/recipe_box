@@ -73,7 +73,7 @@
                 </div>
             <?php endif; ?> 
         </div>
-        <div class="uploading-recipe">
+        <div class="uploading-recipe category">
             <div class="upload-recipe-tile-titles">
                 <h2>Category</h2>
             </div>
