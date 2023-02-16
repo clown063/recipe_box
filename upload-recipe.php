@@ -33,7 +33,7 @@
                             </div>
                             <input type="url" placeholder="Paste Recipe Link Here" name="link" required>
                         </div>
-                        <div>
+                        <div class="food-form">
                             <div class="food-input">
                                 <i class="fas fa-hamburger"></i>
                                 <input type="text" placeholder="Food Name" name="foodName">
@@ -73,8 +73,8 @@
                 </div>
             <?php endif; ?> 
         </div>
-        <div class="uploading-category">
-            <div class="uploading-category-titles">
+        <div class="uploading-recipe">
+            <div class="upload-recipe-tile-titles">
                 <h2>Category</h2>
             </div>
             <?php if (isset($_SESSION['user_id'])):?>

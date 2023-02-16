@@ -52,7 +52,7 @@
         visibility: hidden;
         z-index: -10;
     }
-    .recipe-tile-titles h2, .upload-recipe-tile-titles h2 {
+    .recipe-tile-titles h2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,7 +61,7 @@
         transform: translate(-50%, -50%);
         width: 100%;
     }
-    .recipe-tile-titles:before, .upload-recipe-tile-titles:before {
+    .recipe-tile-titles:before {
         visibility: hidden;
     }
     /* Others Recipe-tile */
@@ -157,6 +157,76 @@
         font-size: 18.77px;
     }
 
+    /* uploading-recipe.css */
+    .uploading-recipe {
+        padding-top: 10px;
+        min-height: 340px;
+    }
+    /* Title */
+    .upload-recipe-tile-titles h2 {
+        font-size: 35px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 20px;
+    }
+    /* Title Line */
+    .upload-recipe-tile-titles:before {
+        width: 100%;
+    }
+    /* UPPER CONTENTS */
+    /* Contents */
+    .upload-recipe-tile-contents {
+        height: 280px;
+    }
+    .upload-recipe-tile-contents > div {
+        width: 600px;
+    }
+    /* Left */
+    /* Uploading Pics */
+    .upload-pic {
+        border: 1.5px solid #FAE6B1;
+    }
+    .upload-pic-div i {
+        font-size: 90px;
+    }
+    .upload-pic-div p {
+        font-size: 13px;
+    }
+    /* Link */
+    .pic-link > input {
+        padding: 10px 11px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    /* Right */
+    .food-input {
+        border: 0.8px solid #FFA101;
+    }
+    .food-input i {
+        font-size: 23px;
+    }
+    .food-input input,.food-input select, .food-input input ::placeholder, .food-input input::placeholder{
+        font-size: 15px;
+    }
+    .food-submit-btn {
+        border-radius: 20px;
+        font-size: 15px;
+    }
+    /* DOWN CONTENTS */
+    .uploading-category-contents {
+        width: 95%;
+    }
+    .category-tile {
+        width: 200px;
+    }
+    /* Upper Part of Category Tile */
+    .category-tile-title h4 {
+        font-size: 12px;
+    }
+    /* Down Part of Category Tile */
+    .category-number i, .category-number p {
+        font-size: 12px;
+    }
 }
 @media screen and (max-width: 642px) {
     /* Header */
@@ -302,8 +372,56 @@
     .input-div div input {
         width: 330px;
     }
-}
 
+    /* Smallest size for resolution is 320px */
+    /* uploading-recipe.css */
+    .uploading-recipe {
+        padding-top: 0;
+        min-height: 550px;
+    }
+    /* Title */
+    .upload-recipe-tile-titles {
+        height: 50px;
+    }
+    .upload-recipe-tile-titles h2 {
+        font-size: 30px;
+        padding: 0 6px;
+        width: 230px;
+    }
+    .upload-recipe-tile-titles:before {
+        height: 2px;
+    }
+    /* UPPER CONTENTS */
+    /* Contents */
+    .upload-recipe-tile-contents {
+        height: 500px;
+    }
+    .upload-recipe-tile-contents > div {
+        width: 320px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+    }
+    .upload-recipe-tile-contents > div > div.food-form {
+        justify-content: flex-start;
+    }
+    .food-submit-btn {
+        margin-top: 10px;
+    }
+    /* DOWN CONTENTS */
+    /* Contents */
+    .category-tile {
+        width: 256px;
+    }
+    /* Upper Part of Category Tile */
+    .category-tile-title h4 {
+        font-size: 15px;
+    }
+    /* Down Part of Category Tile */
+    .category-number i, .category-number p {
+        font-size: 15px;
+    }
+}
 
 @media screen and (min-height: 1000px) {
     header {

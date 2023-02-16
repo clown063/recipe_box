@@ -7,16 +7,16 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-/* Title */
 .uploading-recipe {
-    font-size: 1vw;
     padding-top: 1vw;
     height: 50%;
     width: 100%;
     min-height: 290px;
 }
+/* Title */
 .upload-recipe-tile-titles {
     position: relative;
+    top: 0;
     width: 100%;
     height: 15%;
 }
@@ -25,13 +25,14 @@
     top: 50%;
     left: 2%;
     transform: translateY(-50%);
-    font-size: 2.2vw;
+    font-size: 2.4vw;
     color: #31525B;
     text-transform: uppercase;
     z-index: 2;
     background: #fff;
     padding-right: 2vw;
 }
+/* Title Line */
 .upload-recipe-tile-titles:before {
     position: absolute;
     top: 50%;
@@ -43,6 +44,8 @@
     background-color: #FFA101;
     z-index: -2;
 }
+
+/* UPPER CONTENTS */
 /* Contents */
 .upload-recipe-tile-contents {
     display: flex;
@@ -77,7 +80,7 @@
     width: 80%;
     aspect-ratio: 1.618 / 1;
     overflow: hidden;
-    border: 0.1375em solid #FAE6B1;
+    border: 0.1375vw solid #FAE6B1;
     z-index: 1;
 }
 .upload-pic input {
@@ -97,18 +100,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 5%;
     width: 100%;
     height: 100%;
     z-index: -10;
 }
 .upload-pic-div i {
-    font-size: 8em;
+    font-size: 8vw;
     opacity: 0.3;
     z-index: -10;
 }
 .upload-pic-div p {
-    font-size: 1em;
+    font-size: 1vw;
     z-index: -10;
 }
 #food-preview-selected-image {
@@ -124,14 +127,17 @@
 }
 /* Link */
 .pic-link > input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     outline: none;
     border: none;
     background-color: #FAE6B1;
     width: 80%;
-    aspect-ratio: 1/ 0.1;
-    border-radius: 0.6875em;
-    font-size: 1.43em;
-    padding: 0.55em 0.77em;
+    aspect-ratio: 10/ 1;
+    border-radius: 0.6875vw;
+    font-size: 1.43vw;
+    padding: 0.55vw 0.77vw;
     color: #31525B;
 }
 /* Right */
@@ -139,8 +145,8 @@
     display: grid;
     grid-template-columns: 2fr 8fr;
     width: 80%;
-    aspect-ratio: 1/ 0.16;
-    border: 0.1375em solid #FFA101;
+    aspect-ratio: 6.15/ 1;
+    border: 0.1375vw solid #FFA101;
 }
 .food-input i {
     display: flex;
@@ -155,6 +161,9 @@
     width: 100%;
     border: none;
     outline: none;
+    background: none;
+    /* Remove the background color from safari */
+    -webkit-appearance: none;
 }
 .food-input input ::placeholder{
     position: absolute;
@@ -163,14 +172,20 @@
     font-size: 1.43vw;
     color: #FFA101;
 }
-.food-input input::placeholder {
+/* Because the text is lighter in firefox */
+input:-moz-placeholder,
+input::-moz-placeholder {
+    opacity: 1;
+}
+/* Somehow it doesn't work on safari */
+.food-input input::placeholder{
     font-size: 1.43vw;
     color: #FFA101;
 }
 .food-submit-btn {
     display: block;
     width: 80%;
-    height: 3.4375vw;
+    aspect-ratio: 5.87/1;
     border-radius: 1.71875vw;
     font-size: 1.43vw;
     outline: none;
@@ -185,47 +200,11 @@
 .food-submit-btn:hover {
     background-position:right;
 }
-
-/* DOWN */
-.uploading-category {
-    padding-top: 1vw;
-    height: 50%;
-    min-height: 290px;
-    width: 100%;
-}
-.uploading-category-titles {
-    position: relative;
-    top: 0;
-    display: grid;
-    grid-template-columns: 2fr 8fr;
-    width: 100%;
-    height: 15%;
-}
-.uploading-category-titles h2 {
-    position: absolute;
-    top: 50%;
-    left: 2%;
-    transform: translateY(-50%);
-    font-size: 2.2vw;
-    color: #31525B;
-    text-transform: uppercase;
-}
-.uploading-category-titles:before {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    content:'';
-    width: 83%;
-    height: 0.1375vw;
-    background-color: #FFA101;
-}
-.uploading-category-titles.index:before {
-    width: 77%;
-}
+/* DOWN CONTENTS */
+/* Contents */
 .uploading-category-main {
-    display: grid;
-    grid-template-rows: 8fr 2fr;
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -235,13 +214,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2%;
+    width: 100%;
 }
+/* Category Tile */
 .category-tile {
-    display: grid;
-    grid-template-rows: 1.3fr 7.4fr 1.3fr;
     width: 20%;
-    height: 12.4035vw;
+    aspect-ratio: 1.2 / 1;
+    display: grid;
+    grid-template-rows: 1.3fr 7.7fr 1.3fr;
 }
+/* Upper Part of Category Tile */
 .category-tile-title {
     display: flex;
     justify-content: flex-start;
@@ -254,13 +236,11 @@
     font-size: 0.88vw;
     color: #31525B;
 }
-.category-tile-title.add h4 {
-    color: #FFA101;
-}
+/* Middle Part of Category Tile */
 .category-tile-pic {
     position: relative;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1.618 / 1;
     overflow: hidden;
     cursor: pointer;
     opacity: 1;
@@ -269,40 +249,10 @@
     opacity: 0.7;
 }
 .category-tile-pic img {
-    width: 100%;
+    width: 110%;
     height: auto;
 }
-.category-tile-pic.add div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: #FAE6B1;
-}
-.category-tile-pic.add div:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 6vw;
-    height: 0.3vw;
-    border-radius: 0.34375vw;
-    background-color: #FFA101;
-}
-.category-tile-pic.add div:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0.3vw;
-    height: 6vw;
-    border-radius: 0.34375vw;
-    background-color: #FFA101;
-}
+/* Down Part of Category Tile */
 .category-tile-sub {
     display: flex;
     align-items: center;
@@ -314,11 +264,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 12%;
-}
-.category-number button {
-    border: none;
-    outline: none;
-    background-color: transparent;
 }
 .category-number i {
     font-size: 0.88vw;
